@@ -1,0 +1,29 @@
+{% extends 'master/base1.html' %} {% load static %} {% block content %}
+
+<div class="card">
+  {% if product.product_image %}
+  <img
+    src="{{ product.product_image.url }}"
+    class="card-img-top"
+    alt="{{ product.name }}"
+    style="width: 500px; height: auto"
+  />
+  {% else %}
+  <img
+    src="{% static 'images/no-image.png' %}"
+    class="card-img-top"
+    alt="No Image"
+    style="width: 500px; height: auto"
+  />
+  {% endif %}
+
+  <div class="card-body">
+    <h2>{{ product.name }}</h2>
+    <p><strong>Price:</strong> Rs. {{ product.price }}</p>
+    <p>{{ product.description }}</p>
+    <a href="{% url 'products' %}" class="btn btn-secondary mt-3"
+      >← Back to Products</a
+    >
+  </div>
+</div>
+{% endblock %}

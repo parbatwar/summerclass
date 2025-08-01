@@ -1,6 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from products.models import Category, Product
+from blog.models import Blog
 
 def home(request):
-  return render(request, 'home/home.html')
+  products = Product.objects.all()
+  blogs = Blog.objects.all()
+  return render(request, 'home/home1.html', 
+    {
+    'products':products,
+    'blogs':blogs
+    })
+  

@@ -6,7 +6,12 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-  <h1>Welcome to the Marketplace</h1>
-  {% block content %}{% endblock %}
+  {% include 'includes/header.html' %}
+  
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include 'includes/footer.html' %}
 </body>
 </html>
