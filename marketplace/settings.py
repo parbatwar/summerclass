@@ -27,8 +27,11 @@ SECRET_KEY = 'django-insecure-ds4^iv427g^a+u^vh=q-+ja6rvn!z6l6y4t8t*&wgz+q$)_rk0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+  'summerclass-pm62.onrender.com', #Render URL
+  '127.0.0.1',  #for local development
+  'localhost', #optional 
+]
 
 # Application definition
 
@@ -145,3 +148,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #media files configuration
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://summerclass-pm62.onrender.com',
+]
