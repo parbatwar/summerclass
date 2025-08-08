@@ -31,6 +31,8 @@ ALLOWED_HOSTS = [
   'summerclass-pm62.onrender.com', #Render URL
   '127.0.0.1',  #for local development
   'localhost', #optional 
+  'sunuwarparbat.com.np', #custom domain name
+  'www.sunuwarparbat.com.np',
 ]
 
 # Application definition
